@@ -1,33 +1,3 @@
-function myFunc(){
-    var e = document.getElementById("malid").value;
-    if(e == '')
-        document.getElementById("msgmal").innerHTML = "Please Enter Email id!";
-    else if(e.indexOf('@') <= 0)
-        document.getElementById("msgmal").innerHTML = "Invalid mail!";
-    else if(e.indexOf('.') <= 0)
-        document.getElementById("msgmal").innerHTML = "Invalid mail!"; 
-    else if(e.indexOf('.') <= 0)
-        document.getElementById("msgmal").innerHTML = "Invalid mail!";
-    else if((e.charAt(e.length-4) != '.') && (e.charAt(e.length-3) != '.'))
-        document.getElementById("msgmal").innerHTML = "Invalid mail!";
-    else
-        document.getElementById("message").innerHTML = '';
-}
-
-function myFunc2(){
-    var g = document.getElementById("pass").value;
-    var b = g.length;
-    console.log(b)
-    if(g == '')
-        document.getElementById("message2").innerHTML = "Please Enter password!";
-    else if(b >= 20)
-        document.getElementById("message2").innerHTML = "Invalid password!";
-    else if(b <= 8)
-        document.getElementById("message2").innerHTML = "Invalid password!";
-    else
-        document.getElementById("message2").innerHTML = '';
-}
-
 function myFunc3(){
     var a1 = document.getElementById("fname").value;
     var a2 = a1.length;
@@ -47,11 +17,11 @@ function myFunc4(){
     var a3 = document.getElementById("lname").value;
     var a4 = a3.length;
     if(a3 == '')
-        document.getElementById("message4").innerHTML = "Please enter name!";
-    else if(a4 >= 15)
-        document.getElementById("message4").innerHTML = "Invalid name length!";
-    else if(a4 <= 4)
-        document.getElementById("message4").innerHTML = "Invalid name length!";
+        document.getElementById("message4").innerHTML = "Please enter your mail!";
+    else if(a4 >= 25)
+        document.getElementById("message4").innerHTML = "Invalid mail length!";
+    else if(a4 <= 8)
+        document.getElementById("message4").innerHTML = "Invalid mail length!";
     else
         document.getElementById("message4").innerHTML = '';
 }
@@ -61,11 +31,11 @@ function myFunc5(){
     var a5 = document.getElementById("num").value;
     var a6 = a5.length;
     if(a5 == '')
-        document.getElementById("message5").innerHTML = "Please Enter number!";
+        document.getElementById("message5").innerHTML = "Please Enter password!";
     else if(a6 >= 20)
-        document.getElementById("message5").innerHTML = "Invalid number!";
+        document.getElementById("message5").innerHTML = "Invalid password!";
     else if(a6 <= 8)
-        document.getElementById("message5").innerHTML = "Invalid number!";
+        document.getElementById("message5").innerHTML = "Invalid password!";
     else
         document.getElementById("message5").innerHTML = '';
 }

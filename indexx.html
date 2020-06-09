@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">    
+        <!-- <title>KIET-EYE</title> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+        <link rel="stylesheet" type="text/css" href="loginn.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/my-login.css">
+</head>
+
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="avat-01-512.webp" alt="logo">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Login</h4>
+							<form>
+								<div class="form-group">
+									<label for="email"><i class="fas fa-user-circle"></i> Usernmae</label>
+									<input type="email" class="form-control inp" id="username" name="email" value="" placeholder="Enter user name" onkeyup="valusername()" required>
+								</div>
+
+								<div class="form-group">
+									<label for="password"><i class="fas fa-unlock-alt"></i> Password
+										<a href="#" class="float-right">
+											Forgot Password?
+										</a>
+									</label>
+									<input id="password" type="password" class="form-control inp" placeholder="Enter password"  onkeyup="valpassword()" required>
+								</div>
+
+								<div class="form-group">
+									<div class="custom-checkbox custom-control">
+										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
+										<label for="remember" class="custom-control-label">Remember Me</label>
+									</div>
+								</div>
+
+								<div class="form-group m-0">
+                                    <button class="btn btn-block" type="button" onclick="validation()">LogIn</button>
+
+                                </div>
+                                
+								<div class="mt-4 text-center">
+                                    <p>or login with</p>
+                                    <i style="color: blue; margin-right: 10px;" class="fab fa-facebook-f fa-1x"></i><i class="fab fa-google fa-1x"></i><i style="color: rgb(163, 163, 219); margin-left: 10px;" class="fab fa-twitter"></i>
+								</div>
+
+								<div class="mt-4 text-center">
+									Don't have an account? <a href="register.html">Create One</a>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+                        Copyright &copy; 2020 -- KIET-EYE 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+	function valusername() {
+    var username = document.getElementById("username").value;
+    console.log(username)
+    var usernameValue = username.trim();
+    if (usernameValue == "") {
+        $("#username").css({ "border": "none", "border": "2px solid red" });
+    }
+    else if (usernameValue != "") {
+        $("#username").css({ "border": "none", "border": "2px solid green" });
+        return true;
+    }
+}
+function valpassword() {
+    var password = document.getElementById("password").value;
+    console.log(password)
+    var passwordValue = password.trim();
+    if (passwordValue == "") {
+        $("#password").css({ "border": "none", "border": "2px solid red" });
+    }
+    else if (passwordValue != "") {
+        $("#password").css({ "border": "none", "border": "2px solid green" });
+        return true;
+    }
+}
+function validation () {
+    var pass = valpassword();
+    var use = valusername();
+    if ((pass == true) && (use == true)) {
+        validateAPI();
+    }
+    else {
+        alert('invalid username and password combination')
+    }
+}
+function validateAPI() {
+        fetch("http://jsonplaceholder.typicode.com/users/3")
+            .then(function (response) {
+                if (response.status == 200) {
+                    return response.json();
+                } else {
+                    throw new Error('Invalid user ID');
+                }
+            })
+            .then((data) => {
+                console.log(data);
+                var usernameData = document.getElementById("username").value;
+                var passwordData = document.getElementById("password").value;
+                if ((data.username == usernameData) && (data.id == passwordData)) {
+                    window.location = "index.html";
+                }
+                else {
+                    alert("Invalid Credentials");
+                }
+
+
+
+
+            })
+            .catch((err) => {
+                console.log('ERROR: ', err.message);
+            });
+    }
+	</script>
+</body>
+</html>
